@@ -1,0 +1,17 @@
+I, [2018-05-28T21:46:05.260272 #4323]  INFO -- : [6cae9e19-726f-4d2b-a871-5aa2169321d9] Started GET "/" for 127.0.0.1 at 2018-05-28 21:46:05 +0200
+I, [2018-05-28T21:46:05.263747 #4323]  INFO -- : [6cae9e19-726f-4d2b-a871-5aa2169321d9] Processing by HomeController#index as HTML
+I, [2018-05-28T21:46:05.292193 #4323]  INFO -- : [6cae9e19-726f-4d2b-a871-5aa2169321d9]   Rendering home/index.html.erb within layouts/application
+I, [2018-05-28T21:46:05.293084 #4323]  INFO -- : [6cae9e19-726f-4d2b-a871-5aa2169321d9]   Rendered home/index.html.erb within layouts/application (0.6ms)
+I, [2018-05-28T21:46:05.295280 #4323]  INFO -- : [6cae9e19-726f-4d2b-a871-5aa2169321d9] Completed 200 OK in 31ms (Views: 13.8ms)
+I, [2018-05-28T21:46:05.347648 #4323]  INFO -- : [bf4cf17b-924c-4238-aa8f-1ddd0a6dedac] Started GET "/assets/application-bd4d90efeeadd8bb70148a6276a91495f3e0d24675c393961da373fe2be0b547.css" for 127.0.0.1 at 2018-05-28 21:46:05 +0200
+I, [2018-05-28T21:46:05.348024 #4323]  INFO -- : [4b14200a-d910-4ae0-ba93-09fb6fc6467b] Started GET "/assets/application-1db16ddbdbb8ba0fb708df682b4a2d9ecf1d1ec996f9ad8a0b6deee93affbfde.js" for 127.0.0.1 at 2018-05-28 21:46:05 +0200
+I, [2018-05-28T21:46:08.379123 #4323]  INFO -- : [636dfec3-e61e-4b73-bfc6-91d98ebe971b] Started GET "/" for 127.0.0.1 at 2018-05-28 21:46:08 +0200
+I, [2018-05-28T21:46:08.380109 #4323]  INFO -- : [636dfec3-e61e-4b73-bfc6-91d98ebe971b] Processing by HomeController#index as HTML
+I, [2018-05-28T21:46:08.380985 #4323]  INFO -- : [636dfec3-e61e-4b73-bfc6-91d98ebe971b]   Rendering home/index.html.erb within layouts/application
+I, [2018-05-28T21:46:08.381145 #4323]  INFO -- : [636dfec3-e61e-4b73-bfc6-91d98ebe971b]   Rendered home/index.html.erb within layouts/application (0.0ms)
+I, [2018-05-28T21:46:08.381806 #4323]  INFO -- : [636dfec3-e61e-4b73-bfc6-91d98ebe971b] Completed 200 OK in 2ms (Views: 1.0ms)
+I, [2018-05-28T21:46:34.947718 #4323]  INFO -- : [97a239c0-a663-423f-8c64-2af75c13f8de] Started GET "/" for 127.0.0.1 at 2018-05-28 21:46:34 +0200
+I, [2018-05-28T21:46:34.948502 #4323]  INFO -- : [97a239c0-a663-423f-8c64-2af75c13f8de] Processing by HomeController#index as HTML
+I, [2018-05-28T21:46:34.949396 #4323]  INFO -- : [97a239c0-a663-423f-8c64-2af75c13f8de]   Rendering home/index.html.erb within layouts/application
+I, [2018-05-28T21:46:34.949685 #4323]  INFO -- : [97a239c0-a663-423f-8c64-2af75c13f8de]   Rendered home/index.html.erb within layouts/application (0.0ms)
+I, [2018-05-28T21:46:34.950410 #4323]  INFO -- : [97a239c0-a663-423f-8c64-2af75c13f8de] Completed 200 OK in 2ms (Views: 1.2ms)
