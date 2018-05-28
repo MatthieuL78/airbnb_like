@@ -13,10 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-.section{
-  background: url("https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") 0 0 no-repeat;
-	opacity:0.75;
-  background-size: 100% auto;
-  height: 300px;
-}
