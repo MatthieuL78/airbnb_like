@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #DDD;
+}
+.section{
+  background: url("https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") 0 0 no-repeat;
+	opacity:0.75;
+  background-size: 100% auto;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  width: 30%;
+  margin: 5px;
+  background-color: #FFF;
+
+}
+.main img{
+  width: 100%;
+}
