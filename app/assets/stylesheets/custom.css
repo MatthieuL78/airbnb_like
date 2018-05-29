@@ -1,10 +1,11 @@
 html, body{
-  margin: 0 !important;
+  margin: 0;
   padding: 0;
-  background-color: #DDD;
+  background-color: #FFF;
 }
 .header{
   background-image: url("https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
   background-size: 100% auto;
   height: 300px;
 }
@@ -35,4 +36,43 @@ html, body{
 }
 .main img{
   width: 100%;
+}
+
+.container{
+  display: flex;
+}
+.article{
+  flex: 1;
+}
+.description{
+  flex: 1;
+}
+.container img{
+  width: 100%;
+}
+.button{
+  display: flex;
+  color: #FFF;
+}
+.button a{
+  background-color: rgba(30,30,250,.7);
+  border-radius: 4px;
+  padding: 20px;
+  margin: auto;
+  align-items: center;
+  width: 90%;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+
+}
+.button a:hover{
+  background-color: rgba(30,30,250,1);
+  color: #FFF;
+}
+.section1{
+  height: 300px;
+}
+.section1 h1{
+  text-align: center;
 }
