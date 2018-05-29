@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart, only: [:edit, :update, :destroy]
+  before_action :check_user, only: [:show]
 
   # GET /carts
   # GET /carts.json
@@ -10,6 +11,7 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+  	
   end
 
   # GET /carts/new
@@ -72,4 +74,10 @@ class CartsController < ApplicationController
       params.fetch(:cart, {})
     end
 
+    def check_user
+      @cart = Cart.find(params[:id])
+      redirect_to root_path unless current_user == @cart.user
+      @price = 0
+      @cart.items.each { |item| @price += item.price }
+    end
 end

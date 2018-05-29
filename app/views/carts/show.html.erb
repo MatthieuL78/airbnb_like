@@ -1,2 +1,6 @@
 <h1>my carts : <%= @cart.id %></h1>
+<% @cart.items.each do |item| %>
+<%= item.id %>
+<% end %> 
 
+<p>Prix total : <%= @price %></p>
