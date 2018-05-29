@@ -58,22 +58,24 @@ footer p{
 }
 /* le header */
 .header{
-  background-image: url("https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://img00.deviantart.net/434b/i/2015/031/e/c/hd_desktop_background__galaxy_cat_by_pattersondesigns-d8g4mn9.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  height: 300px;
+  background-size: 100%;
+  background-position: center;
 }
 .header h1{
   margin: 90px 0 20px 0px;
-
+  padding-bottom: 10px;
+}
+.header h1:hover{
+  color: #0eeb1d;
 }
 .header p{
-  margin: 10px auto;
+  margin: 13px auto;
 }
 
 .filter{
   background-color: rgba(10, 20, 28, .5);
-  height: 300px;
 }
 /* fin de header */
 
@@ -149,4 +151,18 @@ footer p{
 }
 .details{
   padding: 30px;
+}
+
+/* responsive */
+@media screen and (min-width: 200px) and (max-width: 740px) {
+  .header{
+    background-image: url("https://img00.deviantart.net/434b/i/2015/031/e/c/hd_desktop_background__galaxy_cat_by_pattersondesigns-d8g4mn9.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+  }
+}
+/* devise */
+.field{
+  background-color: red;
 }

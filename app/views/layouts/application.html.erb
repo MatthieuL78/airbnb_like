@@ -12,6 +12,15 @@
   </head>
 
   <body>
+    <div class="nav">
+      <%= image_tag ("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png") %>
+      <div class="login">
+        <%= link_to "Connexion", sign_in_path %>
+        <%= link_to "Sign Up", sign_up_path %>
+      </div>
+    </div>
+
+
     <%= yield %>
     <footer>
       <h1>😹😸😺😼</h1>
