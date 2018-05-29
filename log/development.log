@@ -1625,6 +1625,7 @@ Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
   Rendered home/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 1611ms (Views: 1597.2ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-05-29 12:57:45 +0200
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/web-console-3.6.2/lib/web_console/middleware.rb:135
@@ -1814,3 +1815,97 @@ Processing by HomeController#show as HTML
 Completed 200 OK in 49ms (Views: 41.4ms | ActiveRecord: 0.0ms)
 
 
+=======
+Started GET "/" for 127.0.0.1 at 2018-05-29 12:58:23 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 1054ms (Views: 1027.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180529105843)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180529105843_devise_create_users.rb:5
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180529105843_devise_create_users.rb:5
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20180529105843_devise_create_users.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20180529105843_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (55.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529105843"]]
+  ↳ bin/rails:9
+  [1m[35m (542.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-29 13:03:49 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/malus/.rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/malus/.rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.6ms)
+  Rendered /home/malus/.rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (3867.9ms)
+Completed 200 OK in 4164ms (Views: 4142.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-29 13:04:09 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hktyYO63obOS+9mnthp6NJ8hbTo+N3UIomgk8cOe4/S6itTHoqqCxFYXsOnzzuM5B6M7HegJMEH6tldFSjN0ZQ==", "user"=>{"email"=>"jack@jack.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jack@jack.com"], ["LIMIT", 1]]
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jack@jack.com"], ["encrypted_password", "$2a$11$moAgANalMps3Af1lce0mjOH/AlNsXjKFo7b/jx3kUIwp3haj7GYWy"], ["created_at", "2018-05-29 11:04:09.227409"], ["updated_at", "2018-05-29 11:04:09.227409"]]
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (909.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (2.9ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-05-29 11:04:10.141987"], ["last_sign_in_at", "2018-05-29 11:04:10.141987"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-05-29 11:04:10.144637"], ["id", 1]]
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (485.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 1680ms (ActiveRecord: 1399.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-29 13:04:10 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-29 13:15:20 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/malus/.rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/malus/.rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /home/malus/.rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (98.1ms)
+Completed 200 OK in 395ms (Views: 370.2ms | ActiveRecord: 1.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+>>>>>>> 365854a54f118650574bb160e730e2f3e941312b
