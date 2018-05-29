@@ -1,23 +1,84 @@
+/* les bases */
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
 html, body{
   margin: 0;
   padding: 0;
   background-color: #FFF;
 }
+a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+footer{
+  background-color: rgba(50,50,50,.1);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+footer h1{
+  margin: 20px;
+  padding: 20px;
+}
+footer p{
+  padding: 20px;
+  font-weight: lighter;
+}
+/* la navbar */
+.nav{
+  background: rgba(250,250,250,1);
+  position: relative;
+  height: 65px;
+}
+.nav img{
+  width: 60px;
+  height: 63px;
+  border-radius: 4px;
+}
+.nav .login{
+  color: #FFF;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+.login a{
+  background-color: rgba(150,150,150,1);
+  padding: 5px;
+  border-radius: 4px;
+}
+.login a:hover{
+  background-color: rgba(150,150,150,.5);
+  color: #222;
+}
+/* le header */
 .header{
   background-image: url("https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 300px;
 }
-.header img{
-  width: 60px;
-  border-radius: 4px;
-  margin-bottom: 20px;
+.header h1{
+  margin: 90px 0 20px 0px;
+
 }
+.header p{
+  margin: 10px auto;
+}
+
 .filter{
   background-color: rgba(10, 20, 28, .5);
   height: 300px;
 }
+/* fin de header */
+
+
+
 .section{
   padding: 20px;
   color: #FFF;
@@ -36,6 +97,10 @@ html, body{
 }
 .main img{
   width: 100%;
+  transition: all ease-in-out .2s;
+}
+.main img:hover{
+  transform: scale(1.1) rotate(4deg);
 }
 
 .container{
@@ -71,8 +136,17 @@ html, body{
   color: #FFF;
 }
 .section1{
-  height: 300px;
+  margin: 50px auto;
 }
 .section1 h1{
   text-align: center;
+  padding: 50px;
+  font-weight: lighter;
+}
+.container{
+  background-color: rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+.details{
+  padding: 30px;
 }
