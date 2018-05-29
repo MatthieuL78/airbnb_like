@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:edit, :update, :destroy]
+  before_action :set_cart, only: [:edit, :update, :destroy, :destroy_item]
   before_action :check_user, only: [:show]
 
   # GET /carts
@@ -61,6 +61,13 @@ class CartsController < ApplicationController
       format.html { redirect_to carts_url, notice: 'cart was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def destroy_item
+    item = Item.find(params[:item])
+    cart = item.carts.find(@cart.id)
+    item.carts.delete(cart)
+    redirect_to cart_path(@cart.id)
   end
 
   private
