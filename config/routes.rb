@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  get "home/show", to: "home#show", as: "show"
+  root 'home#cat'
+  get "home/:id", to: "home#show", as: "show"
 
   devise_for :users
   get "users/sign_up", to: "users#new", as: "sign_up"

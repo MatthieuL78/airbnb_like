@@ -2,7 +2,7 @@
 <p>get it right now!!!</p>
 <div class="container">
   <div class="article">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/511aqSC4ffL.jpg" alt="">
+    <%= image_tag(@cat.image_url) %>
   </div>
   <div class="description">
     <div class="details">
@@ -17,31 +17,15 @@
 <div class="section1">
   <h1>Pas satifait?? il y en a pleins d'autre!</h1>
 </div>
-  <div class="content">
+
+<div class="content">
+
+    <% @cats.each do |cat| %>
     <div class="main">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/511aqSC4ffL.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <%= image_tag(cat.image_url) %>
+      <h3><%= cat.title %></h3>
+      <p><%= cat.description %></p>
+      <p><%= cat.price %></p>
     </div>
-    <div class="main">
-      <img src="https://cdn-media.rtl.fr/cache/W9D7tnu9m1vIKSbQp454mQ/880v587-0/online/image/2012/1018/7753607556_isidore-alias-heathcliff-a-eu-droit-a-une-serie-animee-dans-les-annees-80.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="main">
-      <img src="https://vignette.wikia.nocookie.net/dbz-vs/images/9/9c/Beerus-0.png/revision/latest?cb=20151206105013" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <div class="content">
-    <div class="main">
-      <img src="https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/artwork/219181_1_m.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="main">
-      <img src="https://i.skyrock.net/7580/89647580/pics/3192684289_1_2_mwLq5BBT.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="main">
-      <img src="https://i.ytimg.com/vi/B-6OfUpX1ig/maxresdefault.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
+      <% end %>
+</div>
