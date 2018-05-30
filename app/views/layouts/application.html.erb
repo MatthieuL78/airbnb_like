@@ -3,7 +3,9 @@
   <head>
     <title>AirbnbChat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,6 +19,7 @@
     <% if user_signed_in? %>
     <a href="/"><%= image_tag ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH-47ECUboQN1JQWZv6_uBqYUz3UZuuI-1BvxvBCEx4aNgdJfr"), class: "stylay" %></a>
     <div class="login">
+      <%= link_to "Edit", edit_path %>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     </div>
     <% else %>
