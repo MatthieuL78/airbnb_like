@@ -9418,3 +9418,447 @@ ActionView::Template::Error (Nil location provided. Can't build URI.):
   
 app/views/home/cat.html.erb:15:in `block in _app_views_home_cat_html_erb__2098863927893545407_70096900789460'
 app/views/home/cat.html.erb:12:in `_app_views_home_cat_html_erb__2098863927893545407_70096900789460'
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:24:37 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (85.0ms)
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12:     <% @cats.each do |cat| %>
+    13:     <div class="main">
+    14:       <a href="home/<%= cat.id %>">
+    15:      <%= image_tag(cat.image_url) %>
+    16:       <h3><%= cat.title %></h3>
+    17:       <p><%= cat.description %></p>
+    18:       <p><%= cat.price %>€</p></a>
+  
+app/views/home/cat.html.erb:15:in `block in _app_views_home_cat_html_erb__1619097588575570166_56965540'
+app/views/home/cat.html.erb:12:in `_app_views_home_cat_html_erb__1619097588575570166_56965540'
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:25:20 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12:     <% @cats.each do |cat| %>
+    13:     <div class="main">
+    14:       <a href="home/<%= cat.id %>">
+    15:      <%= image_tag(cat.image_url) %>
+    16:       <h3><%= cat.title %></h3>
+    17:       <p><%= cat.description %></p>
+    18:       <p><%= cat.price %>€</p></a>
+  
+app/views/home/cat.html.erb:15:in `block in _app_views_home_cat_html_erb__964508618696055038_60134600'
+app/views/home/cat.html.erb:12:in `_app_views_home_cat_html_erb__964508618696055038_60134600'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (3.2ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Tevin Herzog"], ["description", "Illo harum autem earum sunt."], ["price", 12.47], ["image_url", "https://i.ytimg.com/vi/B-6OfUpX1ig/maxresdefault.jpg"], ["created_at", "2018-05-30 14:27:24.458266"], ["updated_at", "2018-05-30 14:27:24.458266"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (2.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Elliott Vandervort Sr."], ["description", "Laudantium officia consequatur beatae."], ["price", 18.02], ["image_url", "https://i.skyrock.net/7580/89647580/pics/3192684289_1_2_mwLq5BBT.jpg"], ["created_at", "2018-05-30 14:27:24.567855"], ["updated_at", "2018-05-30 14:27:24.567855"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (79.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Onie Schuppe"], ["description", "Tenetur quia sunt vel esse incidunt excepturi."], ["price", 34.51], ["image_url", "https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/artwork/219181_1_m.jpg"], ["created_at", "2018-05-30 14:27:24.656683"], ["updated_at", "2018-05-30 14:27:24.656683"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (71.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (11.1ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Jarod White"], ["description", "Dolorum at qui et quia."], ["price", 14.86], ["image_url", "https://vignette.wikia.nocookie.net/dbz-vs/images/9/9c/Beerus-0.png/revision/latest?cb=20151206105013"], ["created_at", "2018-05-30 14:27:24.734954"], ["updated_at", "2018-05-30 14:27:24.734954"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (404.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (15.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Rhoda Pfannerstill"], ["description", "Repellendus quia et corporis et quidem placeat tempore amet."], ["price", 28.09], ["image_url", "https://cdn-media.rtl.fr/cache/W9D7tnu9m1vIKSbQp454mQ/880v587-0/online/image/2012/1018/7753607556_isidore-alias-heathcliff-a-eu-droit-a-une-serie-animee-dans-les-annees-80.jpg"], ["created_at", "2018-05-30 14:27:25.158565"], ["updated_at", "2018-05-30 14:27:25.158565"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (79.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (31.9ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Dejah Langosh"], ["description", "Quasi tenetur magnam neque doloribus adipisci aut accusamus."], ["price", 67.89], ["image_url", "https://images-na.ssl-images-amazon.com/images/I/511aqSC4ffL.jpg"], ["created_at", "2018-05-30 14:27:25.259048"], ["updated_at", "2018-05-30 14:27:25.259048"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (140.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (2.6ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Bridget Kuphal III"], ["description", "Nostrum ipsum dolores magnam ipsa dolores."], ["price", 73.01], ["image_url", "https://pre00.deviantart.net/5978/th/pre/i/2013/138/b/9/billy_the_cat_by_mannydragon5-d65p3ar.jpg"], ["created_at", "2018-05-30 14:27:25.436986"], ["updated_at", "2018-05-30 14:27:25.436986"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (82.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (2.8ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ms. Althea Franecki"], ["description", "Facere eveniet ut est."], ["price", 24.35], ["image_url", "https://www.animationsource.org/sites_content/lion_king/upload/fanfic/html/_nala_au_temps_ou_scar_etait_roi_.jpg"], ["created_at", "2018-05-30 14:27:25.531067"], ["updated_at", "2018-05-30 14:27:25.531067"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (67.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (2.8ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Alfonso Wolf"], ["description", "Ad debitis non ut rerum maiores et."], ["price", 21.79], ["image_url", "https://ih0.redbubble.net/image.477708317.0759/flat,800x800,070,f.jpg"], ["created_at", "2018-05-30 14:27:25.613966"], ["updated_at", "2018-05-30 14:27:25.613966"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (72.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:27:33 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12:     <% @cats.each do |cat| %>
+    13:     <div class="main">
+    14:       <a href="home/<%= cat.id %>">
+    15:      <%= image_tag(cat.image_url) %>
+    16:       <h3><%= cat.title %></h3>
+    17:       <p><%= cat.description %></p>
+    18:       <p><%= cat.price %>€</p></a>
+  
+app/views/home/cat.html.erb:15:in `block in _app_views_home_cat_html_erb___3359128218793374679_57189120'
+app/views/home/cat.html.erb:12:in `_app_views_home_cat_html_erb___3359128218793374679_57189120'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (107.9ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (77.5ms)[0m  [1m[35mCREATE  INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts_items"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (90.5ms)[0m  [1m[35mCREATE TABLE "carts_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cart_id" integer, "item_id" integer)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (78.8ms)[0m  [1m[35mCREATE  INDEX "index_carts_items_on_cart_id" ON "carts_items" ("cart_id")[0m
+  ↳ db/schema.rb:22
+  [1m[35m (95.9ms)[0m  [1m[35mCREATE  INDEX "index_carts_items_on_item_id" ON "carts_items" ("item_id")[0m
+  ↳ db/schema.rb:22
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "items"[0m
+  ↳ db/schema.rb:29
+  [1m[35m (100.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "price" decimal, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:38
+  [1m[35m (87.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (80.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (101.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (78.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (90.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180529130655)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (343.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180528155528),
+(20180529105843),
+(20180529124210),
+(20180529125834),
+(20180529130245);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (89.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-30 14:27:49.849109"], ["updated_at", "2018-05-30 14:27:49.849109"]]
+  ↳ db/schema.rb:13
+  [1m[35m (68.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (108.4ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (75.3ms)[0m  [1m[35mCREATE  INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts_items"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (102.3ms)[0m  [1m[35mCREATE TABLE "carts_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cart_id" integer, "item_id" integer)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (88.8ms)[0m  [1m[35mCREATE  INDEX "index_carts_items_on_cart_id" ON "carts_items" ("cart_id")[0m
+  ↳ db/schema.rb:22
+  [1m[35m (205.6ms)[0m  [1m[35mCREATE  INDEX "index_carts_items_on_item_id" ON "carts_items" ("item_id")[0m
+  ↳ db/schema.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "items"[0m
+  ↳ db/schema.rb:29
+  [1m[35m (79.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "price" decimal, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:38
+  [1m[35m (78.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (98.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (104.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (76.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (78.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180529130655)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (82.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180528155528),
+(20180529105843),
+(20180529124210),
+(20180529125834),
+(20180529130245);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (120.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (3.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-30 14:27:51.318559"], ["updated_at", "2018-05-30 14:27:51.318559"]]
+  ↳ db/schema.rb:13
+  [1m[35m (179.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (3.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-05-30 14:27:51.513467"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (1.6ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Lilly Parisian"], ["description", "Debitis consequatur aut commodi eligendi voluptatibus."], ["price", 95.17], ["image_url", "https://i.ytimg.com/vi/B-6OfUpX1ig/maxresdefault.jpg"], ["created_at", "2018-05-30 14:27:51.727456"], ["updated_at", "2018-05-30 14:27:51.727456"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (72.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (4.0ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Mr. April Mills"], ["description", "Voluptas doloremque dolore nihil voluptas est quia."], ["price", 32.41], ["image_url", "https://i.skyrock.net/7580/89647580/pics/3192684289_1_2_mwLq5BBT.jpg"], ["created_at", "2018-05-30 14:27:51.808826"], ["updated_at", "2018-05-30 14:27:51.808826"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (88.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (2.8ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Amari O'Connell"], ["description", "Sapiente consequuntur et est est consectetur aliquid."], ["price", 40.22], ["image_url", "https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/artwork/219181_1_m.jpg"], ["created_at", "2018-05-30 14:27:51.910730"], ["updated_at", "2018-05-30 14:27:51.910730"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (3.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Sophie Schaefer DDS"], ["description", "Quia qui alias dolores corrupti."], ["price", 71.45], ["image_url", "https://vignette.wikia.nocookie.net/dbz-vs/images/9/9c/Beerus-0.png/revision/latest?cb=20151206105013"], ["created_at", "2018-05-30 14:27:51.993396"], ["updated_at", "2018-05-30 14:27:51.993396"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (85.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (3.2ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Paul Lebsack"], ["description", "Velit veritatis voluptas eius sit."], ["price", 32.81], ["image_url", "https://cdn-media.rtl.fr/cache/W9D7tnu9m1vIKSbQp454mQ/880v587-0/online/image/2012/1018/7753607556_isidore-alias-heathcliff-a-eu-droit-a-une-serie-animee-dans-les-annees-80.jpg"], ["created_at", "2018-05-30 14:27:52.090451"], ["updated_at", "2018-05-30 14:27:52.090451"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (69.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (2.9ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eula Mills"], ["description", "Odit voluptate velit ullam ad ipsum dolor excepturi."], ["price", 12.17], ["image_url", "https://images-na.ssl-images-amazon.com/images/I/511aqSC4ffL.jpg"], ["created_at", "2018-05-30 14:27:52.171898"], ["updated_at", "2018-05-30 14:27:52.171898"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (90.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (1.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Harvey Cummings"], ["description", "Reprehenderit ducimus quidem dolore voluptas modi et necessitatibus."], ["price", 24.61], ["image_url", "https://pre00.deviantart.net/5978/th/pre/i/2013/138/b/9/billy_the_cat_by_mannydragon5-d65p3ar.jpg"], ["created_at", "2018-05-30 14:27:52.271167"], ["updated_at", "2018-05-30 14:27:52.271167"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (78.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (3.0ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Miss Julia Mraz"], ["description", "Eum aspernatur voluptas omnis alias."], ["price", 17.06], ["image_url", "https://www.animationsource.org/sites_content/lion_king/upload/fanfic/html/_nala_au_temps_ou_scar_etait_roi_.jpg"], ["created_at", "2018-05-30 14:27:52.358821"], ["updated_at", "2018-05-30 14:27:52.358821"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (72.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (3.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Amparo Davis"], ["description", "Totam accusamus molestias laudantium maiores."], ["price", 14.03], ["image_url", "https://ih0.redbubble.net/image.477708317.0759/flat,800x800,070,f.jpg"], ["created_at", "2018-05-30 14:27:52.443478"], ["updated_at", "2018-05-30 14:27:52.443478"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (95.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:28:23 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 1397ms (Views: 1380.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:31:38 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/malus/.rvm/gems/ruby-2.3.4/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 670ms (Views: 653.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:32:30 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:33:19 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:33:28 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:33:50 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:34:24 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:34:49 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:35:10 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 77ms (Views: 72.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:35:16 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 66ms (Views: 57.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:36:19 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 56ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:38:58 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-30 16:39:34 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
