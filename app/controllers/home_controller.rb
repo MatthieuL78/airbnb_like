@@ -2,13 +2,10 @@ class HomeController < ApplicationController
   before_action :find_cat, only:[:show]
   before_action :set_cats
   def index
+    @cats = Item.all
   end
 
   def show
-  end
-
-  def cat
-    @cats = Item.all
   end
 
   private
