@@ -62,6 +62,7 @@ footer p{
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  margin-bottom: 50px;
 }
 .header h1{
   margin: 90px 0 20px 0px;
@@ -89,12 +90,13 @@ footer p{
 .content{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .main {
-  margin: 5px;
   background-color: #FFF;
-  width: 30%;
+  flex-basis: 30%;
   box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.4);
+  margin-bottom: 50px;
 }
 .main img{
   width: 100%;
@@ -162,6 +164,10 @@ footer p{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
+  }
+  .main{
+    flex-basis: 100%;
+    margin: 10px 10px 10px 10px;
   }
 }
 /* devise */
