@@ -9341,3 +9341,80 @@ Processing by HomeController#show as HTML
 Completed 200 OK in 153ms (Views: 139.0ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-30 04:14:01 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/web-console-3.6.2/lib/web_console/middleware.rb:135
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (25.2ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12:     <% @cats.each do |cat| %>
+    13:     <div class="main">
+    14:       <a href="home/<%= cat.id %>">
+    15:      <%= image_tag(cat.image_url) %>
+    16:       <h3><%= cat.title %></h3>
+    17:       <p><%= cat.description %></p>
+    18:       <p><%= cat.price %>€</p></a>
+  
+app/views/home/cat.html.erb:15:in `block in _app_views_home_cat_html_erb___2417369296059697161_70180915240140'
+app/views/home/cat.html.erb:12:in `_app_views_home_cat_html_erb___2417369296059697161_70180915240140'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/rake-12.3.1/lib/rake/task.rb:271
+Started GET "/" for 127.0.0.1 at 2018-05-30 04:15:21 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.3.4/gems/web-console-3.6.2/lib/web_console/middleware.rb:135
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12:     <% @cats.each do |cat| %>
+    13:     <div class="main">
+    14:       <a href="home/<%= cat.id %>">
+    15:      <%= image_tag(cat.image_url) %>
+    16:       <h3><%= cat.title %></h3>
+    17:       <p><%= cat.description %></p>
+    18:       <p><%= cat.price %>€</p></a>
+  
+app/views/home/cat.html.erb:15:in `block in _app_views_home_cat_html_erb__2098863927893545407_70096860697200'
+app/views/home/cat.html.erb:12:in `_app_views_home_cat_html_erb__2098863927893545407_70096860697200'
+Started GET "/" for 127.0.0.1 at 2018-05-30 04:15:24 +0200
+Processing by HomeController#cat as HTML
+  Rendering home/cat.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/home/cat.html.erb:12
+  Rendered home/cat.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12:     <% @cats.each do |cat| %>
+    13:     <div class="main">
+    14:       <a href="home/<%= cat.id %>">
+    15:      <%= image_tag(cat.image_url) %>
+    16:       <h3><%= cat.title %></h3>
+    17:       <p><%= cat.description %></p>
+    18:       <p><%= cat.price %>€</p></a>
+  
+app/views/home/cat.html.erb:15:in `block in _app_views_home_cat_html_erb__2098863927893545407_70096900789460'
+app/views/home/cat.html.erb:12:in `_app_views_home_cat_html_erb__2098863927893545407_70096900789460'
