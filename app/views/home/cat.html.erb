@@ -1,0 +1,21 @@
+
+<div class="header">
+  <div class="filter">
+    <div class="section">
+      <h1>The coolest cat from the net</h1>
+      <p>Get your cat right now!</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+    <% @cats.each do |cat| %>
+    <div class="main">
+      <a href="home/<%= cat.id %>">
+     <%= image_tag(cat.image_url) %>
+      <h3><%= cat.title %></h3>
+      <p><%= cat.description %></p>
+      <p><%= cat.price %>€</p></a>
+    </div>
+      <% end %>
+</div>
