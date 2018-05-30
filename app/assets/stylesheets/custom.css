@@ -47,6 +47,11 @@ footer p{
   right: 10px;
   top: 25px;
 }
+.nav .stylay{
+  position: absolute;
+  right: 90px;
+  top: 0px;
+}
 .login a{
   background-color: rgba(150,150,150,1);
   padding: 5px;
