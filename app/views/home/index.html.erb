@@ -2,7 +2,7 @@
   <div class="filter">
     <div class="section">
       <h1>The coolest cat from the net</h1>
-      <p>Get your cat right now!</p>
+      <p>Get your pictures right now!</p>
     </div>
   </div>
 </div>
@@ -13,8 +13,10 @@
       <a href="home/<%= cat.id %>">
      <%= image_tag(cat.image_url) %>
       <h3><%= cat.title %></h3>
+      <br><hr>
+      <h1><%= cat.price %>€</h1>
       <p><%= cat.description %></p>
-      <p><%= cat.price %>€</p></a>
+      </a>
     </div>
       <% end %>
 </div>

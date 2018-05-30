@@ -1,5 +1,8 @@
-<h1>Get your kitten today!</h1>
-<p>get it right now!!!</p>
+<div class="show">
+  <h1>Get your kitten's picture!</h1>
+  <p>get it right now!!!</p>
+</div>
+
 <div class="container">
   <div class="article">
     <%= image_tag(@cat.image_url) %>
@@ -7,16 +10,17 @@
   <div class="description">
     <div class="details">
       <h2><%= @cat.title %></h2>
+      <br><hr>
       <p><%= @cat.description %></p>
-      <p><%= @cat.price %></p>
-</div>
+      <h1><%= @cat.price %>€</h1>
+    </div>
   </div>
 </div>
 <div class="button">
   <%= link_to "Add to cart", root_path %>
 </div>
 <div class="section1">
-  <h1>Pas satifait?? il y en a pleins d'autre!</h1>
+  <h1>Jamais deux sans trois!😸</h1>
 </div>
 
 <div class="content">
