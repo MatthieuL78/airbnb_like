@@ -74,6 +74,27 @@ class CartsController < ApplicationController
     redirect_to cart_path(@cart.id)
   end
 
+  def create
+    # Amount in cents
+    @amount = @price
+
+    customer = Stripe::Customer.create(
+      :email => params[:stripeEmail],
+      :source  => params[:stripeToken]
+    )
+
+    charge = Stripe::Charge.create(
+      :customer    => customer.id,
+      :amount      => @amount,
+      :description => 'Rails Stripe customer',
+      :currency    => 'usd'
+    )
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
