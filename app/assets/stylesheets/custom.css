@@ -310,3 +310,20 @@ footer p{
 #customcarts .photos img{
   width: 100px;
 }
+/* stripe */
+#customstripe{
+  text-align: center;
+  width: 100%;
+  margin: 20px auto;
+}
+.customstripe{
+  height: 60vh;
+  text-align: center;
+}
+#customstripe img{
+  min-width: 70%;
+}
+#customstripe p{
+  text-align: center;
+  margin: 5px auto;
+}
