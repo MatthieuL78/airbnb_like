@@ -631,3 +631,100 @@ I, [2018-05-30T17:23:13.808144 #7380]  INFO -- : [a3ca0e98-fb67-415c-858a-a96526
 D, [2018-05-30T17:23:13.809069 #7380] DEBUG -- : [a3ca0e98-fb67-415c-858a-a96526bd076b]   [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
 I, [2018-05-30T17:23:13.809226 #7380]  INFO -- : [a3ca0e98-fb67-415c-858a-a96526bd076b]   Rendered home/index.html.erb within layouts/application (0.9ms)
 I, [2018-05-30T17:23:13.810044 #7380]  INFO -- : [a3ca0e98-fb67-415c-858a-a96526bd076b] Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+I, [2018-05-31T11:06:05.470670 #6745]  INFO -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c] Started GET "/" for 127.0.0.1 at 2018-05-31 11:06:05 +0200
+I, [2018-05-31T11:06:05.588920 #6745]  INFO -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c] Processing by HomeController#index as HTML
+I, [2018-05-31T11:06:05.637313 #6745]  INFO -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T11:06:05.642602 #6745] DEBUG -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T11:06:05.645716 #6745]  INFO -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c]   Rendered home/index.html.erb within layouts/application (8.1ms)
+I, [2018-05-31T11:06:05.654626 #6745]  INFO -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c]   Rendered layouts/_header.html.erb (3.6ms)
+I, [2018-05-31T11:06:05.657895 #6745]  INFO -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c]   Rendered layouts/_footer.html.erb (0.2ms)
+I, [2018-05-31T11:06:05.658209 #6745]  INFO -- : [a92cf550-080f-4ec3-aeb9-9cefa3258c7c] Completed 200 OK in 68ms (Views: 33.7ms | ActiveRecord: 1.7ms)
+I, [2018-05-31T11:06:05.703308 #6745]  INFO -- : [1b3d4733-0c70-4c00-bb02-fc2c493e80b9] Started GET "/assets/application-e6ebe53a2c29682309d1fb37cd1fbd22a1cd2ad2994e90ed58006f8f7ea5c435.css" for 127.0.0.1 at 2018-05-31 11:06:05 +0200
+D, [2018-05-31T11:07:01.505441 #6826] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2018-05-31T11:07:16.787106 #6835] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+I, [2018-05-31T11:07:16.787260 #6835]  INFO -- : Migrating to CreateCarts (20180529124210)
+D, [2018-05-31T11:07:17.187720 #6835] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:17.192131 #6835] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+D, [2018-05-31T11:07:17.196856 #6835] DEBUG -- :   [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2018-05-31T11:07:17.198652 #6835] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+D, [2018-05-31T11:07:17.206758 #6835] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529124210"]]
+D, [2018-05-31T11:07:17.332994 #6835] DEBUG -- :   [1m[35m (125.1ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-05-31T11:07:17.333507 #6835]  INFO -- : Migrating to ItemChange (20180529125834)
+D, [2018-05-31T11:07:17.355226 #6835] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:17.358684 #6835] DEBUG -- :   [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "items" ADD "cart_id" integer[0m
+D, [2018-05-31T11:07:17.360166 #6835] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_items_on_cart_id" ON "items" ("cart_id")[0m
+D, [2018-05-31T11:07:17.361900 #6835] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529125834"]]
+D, [2018-05-31T11:07:17.477797 #6835] DEBUG -- :   [1m[35m (115.4ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-05-31T11:07:17.478201 #6835]  INFO -- : Migrating to ItemUpdate (20180529130245)
+D, [2018-05-31T11:07:17.502358 #6835] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:17.506638 #6835] DEBUG -- :   [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "items_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "item_id" integer, "cart_id" integer)[0m
+D, [2018-05-31T11:07:17.508285 #6835] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_items_carts_on_item_id" ON "items_carts" ("item_id")[0m
+D, [2018-05-31T11:07:17.510628 #6835] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_items_carts_on_cart_id" ON "items_carts" ("cart_id")[0m
+D, [2018-05-31T11:07:17.515946 #6835] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aitems" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "description" text DEFAULT NULL, "price" decimal DEFAULT NULL, "image_url" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "cart_id" integer DEFAULT NULL)[0m
+D, [2018-05-31T11:07:17.520165 #6835] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "tindex_aitems_on_cart_id" ON "aitems" ("cart_id")[0m
+D, [2018-05-31T11:07:17.522695 #6835] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "aitems" ("id","title","description","price","image_url","created_at","updated_at","cart_id")
+                     SELECT "id","title","description","price","image_url","created_at","updated_at","cart_id" FROM "items"[0m
+D, [2018-05-31T11:07:17.525660 #6835] DEBUG -- :   [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "items"[0m
+D, [2018-05-31T11:07:17.530116 #6835] DEBUG -- :   [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "description" text DEFAULT NULL, "price" decimal DEFAULT NULL, "image_url" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2018-05-31T11:07:17.533885 #6835] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "items" ("id","title","description","price","image_url","created_at","updated_at")
+                     SELECT "id","title","description","price","image_url","created_at","updated_at" FROM "aitems"[0m
+D, [2018-05-31T11:07:17.534653 #6835] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aitems"[0m
+D, [2018-05-31T11:07:17.537247 #6835] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529130245"]]
+D, [2018-05-31T11:07:17.650876 #6835] DEBUG -- :   [1m[35m (113.0ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-05-31T11:07:17.651350 #6835]  INFO -- : Migrating to CartItemChange (20180529130655)
+D, [2018-05-31T11:07:17.698776 #6835] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:17.704785 #6835] DEBUG -- :   [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE "items_carts"[0m
+D, [2018-05-31T11:07:17.707060 #6835] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "carts_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cart_id" integer, "item_id" integer)[0m
+D, [2018-05-31T11:07:17.709398 #6835] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_carts_items_on_cart_id" ON "carts_items" ("cart_id")[0m
+D, [2018-05-31T11:07:17.711787 #6835] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_carts_items_on_item_id" ON "carts_items" ("item_id")[0m
+D, [2018-05-31T11:07:17.715071 #6835] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180529130655"]]
+D, [2018-05-31T11:07:17.811813 #6835] DEBUG -- :   [1m[35m (96.0ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:17.824783 #6835] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2018-05-31T11:07:17.835826 #6835] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:17.837086 #6835] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:26.783429 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2018-05-31T11:07:26.972348 #6861] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:26.973790 #6861] DEBUG -- :   [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Mikayla Gibson PhD"], ["description", "Aut debitis autem distinctio quidem reiciendis."], ["price", 61.78], ["image_url", "https://i.ytimg.com/vi/B-6OfUpX1ig/maxresdefault.jpg"], ["created_at", "2018-05-31 09:07:26.972654"], ["updated_at", "2018-05-31 09:07:26.972654"]]
+D, [2018-05-31T11:07:28.458486 #6861] DEBUG -- :   [1m[35m (1484.2ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:28.461189 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:28.466258 #6861] DEBUG -- :   [1m[36mItem Create (2.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Mr. Ruth Stracke"], ["description", "Deleniti odit nihil sit molestias fugiat."], ["price", 14.87], ["image_url", "https://i.skyrock.net/7580/89647580/pics/3192684289_1_2_mwLq5BBT.jpg"], ["created_at", "2018-05-31 09:07:28.462174"], ["updated_at", "2018-05-31 09:07:28.462174"]]
+D, [2018-05-31T11:07:28.542785 #6861] DEBUG -- :   [1m[35m (75.5ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:28.545432 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:28.551014 #6861] DEBUG -- :   [1m[36mItem Create (2.8ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Trinity Lehner Jr."], ["description", "Quae dolores temporibus et debitis dolor nulla."], ["price", 37.17], ["image_url", "https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/artwork/219181_1_m.jpg"], ["created_at", "2018-05-31 09:07:28.546243"], ["updated_at", "2018-05-31 09:07:28.546243"]]
+D, [2018-05-31T11:07:28.626639 #6861] DEBUG -- :   [1m[35m (74.6ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:28.629213 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:28.634395 #6861] DEBUG -- :   [1m[36mItem Create (2.2ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Elwin Schulist"], ["description", "Voluptatum eum voluptatem rerum vel officiis."], ["price", 67.78], ["image_url", "https://vignette.wikia.nocookie.net/dbz-vs/images/9/9c/Beerus-0.png/revision/latest?cb=20151206105013"], ["created_at", "2018-05-31 09:07:28.630048"], ["updated_at", "2018-05-31 09:07:28.630048"]]
+D, [2018-05-31T11:07:28.711537 #6861] DEBUG -- :   [1m[35m (76.1ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:28.713554 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:28.719434 #6861] DEBUG -- :   [1m[36mItem Create (3.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Susanna Zieme"], ["description", "Tempore aliquid omnis blanditiis at eum ut repellendus."], ["price", 17.88], ["image_url", "https://cdn-media.rtl.fr/cache/W9D7tnu9m1vIKSbQp454mQ/880v587-0/online/image/2012/1018/7753607556_isidore-alias-heathcliff-a-eu-droit-a-une-serie-animee-dans-les-annees-80.jpg"], ["created_at", "2018-05-31 09:07:28.714420"], ["updated_at", "2018-05-31 09:07:28.714420"]]
+D, [2018-05-31T11:07:28.812522 #6861] DEBUG -- :   [1m[35m (91.8ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:28.814591 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:28.820312 #6861] DEBUG -- :   [1m[36mItem Create (2.8ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Walker Jerde"], ["description", "In quisquam molestias earum placeat quibusdam."], ["price", 48.78], ["image_url", "https://images-na.ssl-images-amazon.com/images/I/511aqSC4ffL.jpg"], ["created_at", "2018-05-31 09:07:28.815412"], ["updated_at", "2018-05-31 09:07:28.815412"]]
+D, [2018-05-31T11:07:28.908328 #6861] DEBUG -- :   [1m[35m (86.7ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:28.910337 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:28.915012 #6861] DEBUG -- :   [1m[36mItem Create (2.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Dora Conn III"], ["description", "Hic ut repellendus occaecati qui ipsa ut."], ["price", 69.72], ["image_url", "https://pre00.deviantart.net/5978/th/pre/i/2013/138/b/9/billy_the_cat_by_mannydragon5-d65p3ar.jpg"], ["created_at", "2018-05-31 09:07:28.911004"], ["updated_at", "2018-05-31 09:07:28.911004"]]
+D, [2018-05-31T11:07:28.991666 #6861] DEBUG -- :   [1m[35m (75.7ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:28.993507 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:28.998207 #6861] DEBUG -- :   [1m[36mItem Create (2.2ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Cayla Pfannerstill"], ["description", "Beatae esse officia fugit aut alias iure."], ["price", 34.74], ["image_url", "https://www.animationsource.org/sites_content/lion_king/upload/fanfic/html/_nala_au_temps_ou_scar_etait_roi_.jpg"], ["created_at", "2018-05-31 09:07:28.994227"], ["updated_at", "2018-05-31 09:07:28.994227"]]
+D, [2018-05-31T11:07:29.076019 #6861] DEBUG -- :   [1m[35m (76.9ms)[0m  [1m[36mcommit transaction[0m
+D, [2018-05-31T11:07:29.077884 #6861] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T11:07:29.082844 #6861] DEBUG -- :   [1m[36mItem Create (2.7ms)[0m  [1m[32mINSERT INTO "items" ("title", "description", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Manuel Bauch"], ["description", "Impedit veritatis quia voluptatem soluta qui quam voluptas ex."], ["price", 71.42], ["image_url", "https://ih0.redbubble.net/image.477708317.0759/flat,800x800,070,f.jpg"], ["created_at", "2018-05-31 09:07:29.078579"], ["updated_at", "2018-05-31 09:07:29.078579"]]
+D, [2018-05-31T11:07:29.199346 #6861] DEBUG -- :   [1m[35m (115.6ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-05-31T11:07:40.161901 #6882]  INFO -- : [37b9fbe4-6ca6-484f-866d-317604f8d034] Started GET "/" for 127.0.0.1 at 2018-05-31 11:07:40 +0200
+I, [2018-05-31T11:07:40.166281 #6882]  INFO -- : [37b9fbe4-6ca6-484f-866d-317604f8d034] Processing by HomeController#index as HTML
+I, [2018-05-31T11:07:40.184607 #6882]  INFO -- : [37b9fbe4-6ca6-484f-866d-317604f8d034]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T11:07:40.188646 #6882] DEBUG -- : [37b9fbe4-6ca6-484f-866d-317604f8d034]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T11:07:40.201599 #6882]  INFO -- : [37b9fbe4-6ca6-484f-866d-317604f8d034]   Rendered home/index.html.erb within layouts/application (16.7ms)
+I, [2018-05-31T11:07:40.211809 #6882]  INFO -- : [37b9fbe4-6ca6-484f-866d-317604f8d034]   Rendered layouts/_header.html.erb (5.4ms)
+I, [2018-05-31T11:07:40.215343 #6882]  INFO -- : [37b9fbe4-6ca6-484f-866d-317604f8d034]   Rendered layouts/_footer.html.erb (0.3ms)
+I, [2018-05-31T11:07:40.215611 #6882]  INFO -- : [37b9fbe4-6ca6-484f-866d-317604f8d034] Completed 200 OK in 49ms (Views: 37.6ms | ActiveRecord: 3.0ms)
+I, [2018-05-31T11:07:41.971818 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27] Started GET "/items/1" for 127.0.0.1 at 2018-05-31 11:07:41 +0200
+I, [2018-05-31T11:07:41.972761 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27] Processing by ItemsController#show as HTML
+I, [2018-05-31T11:07:41.972870 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27]   Parameters: {"id"=>"1"}
+D, [2018-05-31T11:07:41.977948 #6882] DEBUG -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27]   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-05-31T11:07:41.985782 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27]   Rendering items/show.html.erb within layouts/application
+D, [2018-05-31T11:07:41.987371 #6882] DEBUG -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27]   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T11:07:41.988077 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27]   Rendered items/show.html.erb within layouts/application (2.1ms)
+I, [2018-05-31T11:07:41.989088 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27]   Rendered layouts/_header.html.erb (0.4ms)
+I, [2018-05-31T11:07:41.989277 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T11:07:41.989563 #6882]  INFO -- : [b93ee2d3-0468-4a4c-99c2-dad05ed46e27] Completed 200 OK in 17ms (Views: 6.4ms | ActiveRecord: 0.8ms)
