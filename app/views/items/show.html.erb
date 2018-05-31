@@ -17,7 +17,7 @@
   </div>
 </div>
 <div class="button">
-  <%= link_to "Add to cart", root_path %>
+  <p><%= button_to "Add to cart", add_item_path(@cart.id,@item.id) %></p>
 </div>
 <div class="section1">
   <h1>Jamais deux sans trois!😸</h1>
