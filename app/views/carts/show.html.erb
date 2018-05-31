@@ -1,6 +1,9 @@
-<h1>my carts : <%= @cart.id %></h1>
-<% @cart.items.each do |item| %>
-<p><%= button_to "Destroy", action: 'destroy_item', id: @cart.id, item: item.id %> cet objet : <%= item.id %>  </p>
-<% end %> 
-
-<p>Prix total : <%= @price %></p>
+<h1>my cart :</h1>
+	<% @cart.items.each do |item| %>
+			<%= image_tag(item.image_url, size: '150', alt: 'my picture') %>
+		    <h3><%= item.title %></h3>
+		    <p>Price : <%= item.price %> $</p>
+			<p><%= button_to "Retirer du panier", action: 'destroy_item', id: @cart.id, item: item.id %></p>
+	<% end %> 
+</div>
+	<p>Prix total : <%= @price %> $</p>
