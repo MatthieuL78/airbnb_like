@@ -54,13 +54,14 @@ footer p{
 }
 .nav .stylay{
   position: absolute;
-  right: 115px;
+  right: 135px;
   top: 0px;
 }
 .login a{
   background-color: rgba(150,150,150,1);
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 4px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .login a:hover{
   background-color: rgba(150,150,150,.7);
