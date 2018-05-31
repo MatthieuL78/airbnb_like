@@ -63,6 +63,10 @@ class CartsController < ApplicationController
     end
   end
 
+  def add_item
+    Cart.find(params[:id]).items << Item.find(params[:item])
+  end
+
   def destroy_item
     item = Item.find(params[:item])
     cart = item.carts.find(@cart.id)
