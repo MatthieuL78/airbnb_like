@@ -1,13 +1,17 @@
 <div id="customcarts">
-  <h1>My Cat carts : <%= @cart.id %></h1>
+  <h1>😺</h1>
+  <h1>My cat carts: <%= @cart.id %></h1>
   <% @cart.items.each do |item| %>
   <div class="photos">
-    <p> La super photo artistique N°: <%= item.id %></p>
+    <p> La superbe photo faite par: <%= item.title %></p>
+    <%= image_tag(item.image_url) %>
     <p><%= button_to "Destroy", action: 'destroy_item', id: @cart.id, item: item.id %></p>
   </div>
   <% end %>
   <div class="totalprice">
     <p>Prix total</p>
     <h2><%= @price %></h2>
+  </div>
+  <div class="footer">
   </div>
 </div>
