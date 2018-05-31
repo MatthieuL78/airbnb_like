@@ -270,7 +270,7 @@ footer p{
 
 #customcarts{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding-bottom: 50px;
   text-align: center;
   background-size: 100%;
@@ -305,4 +305,7 @@ footer p{
   width: 400px;
   border-radius: 4px;
   padding: 5px;
+}
+#customcarts .photos img{
+  width: 100px;
 }
