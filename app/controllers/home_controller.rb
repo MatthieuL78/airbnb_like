@@ -16,7 +16,6 @@ class HomeController < ApplicationController
       @cart.user = current_user
       @cart.save
     end
-    p @cart
   end
 
   def show

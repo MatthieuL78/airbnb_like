@@ -956,3 +956,171 @@ I, [2018-05-31T14:56:25.602617 #17250]  INFO -- : [0da17b05-7962-45e5-89ce-345fc
 I, [2018-05-31T14:56:25.603768 #17250]  INFO -- : [0da17b05-7962-45e5-89ce-345fcb6bac02]   Rendered layouts/_header.html.erb (0.4ms)
 I, [2018-05-31T14:56:25.604057 #17250]  INFO -- : [0da17b05-7962-45e5-89ce-345fcb6bac02]   Rendered layouts/_footer.html.erb (0.0ms)
 I, [2018-05-31T14:56:25.604336 #17250]  INFO -- : [0da17b05-7962-45e5-89ce-345fcb6bac02] Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 1.6ms)
+I, [2018-05-31T16:15:07.538557 #22485]  INFO -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80] Started GET "/" for 127.0.0.1 at 2018-05-31 16:15:07 +0200
+I, [2018-05-31T16:15:07.544097 #22485]  INFO -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80] Processing by HomeController#index as HTML
+D, [2018-05-31T16:15:07.555598 #22485] DEBUG -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+D, [2018-05-31T16:15:07.567164 #22485] DEBUG -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:07.582758 #22485] DEBUG -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T16:15:07.658009 #22485] DEBUG -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+I, [2018-05-31T16:15:07.667399 #22485]  INFO -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T16:15:07.668892 #22485] DEBUG -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T16:15:07.678699 #22485]  INFO -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   Rendered home/index.html.erb within layouts/application (11.1ms)
+I, [2018-05-31T16:15:07.683766 #22485]  INFO -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   Rendered layouts/_header.html.erb (1.0ms)
+I, [2018-05-31T16:15:07.687001 #22485]  INFO -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80]   Rendered layouts/_footer.html.erb (0.2ms)
+I, [2018-05-31T16:15:07.687388 #22485]  INFO -- : [3c3b3ba7-e622-4441-9e83-8c4de3d3ec80] Completed 200 OK in 143ms (Views: 24.9ms | ActiveRecord: 4.8ms)
+I, [2018-05-31T16:15:07.741874 #22485]  INFO -- : [d0a1f86b-8eb9-47cb-b52e-fcb613eb8548] Started GET "/assets/application-b1b6cf77174b312021dc1ca1fe4e1efc9a9426af80a2594aa2fc8a70551039b2.css" for 127.0.0.1 at 2018-05-31 16:15:07 +0200
+I, [2018-05-31T16:15:10.262631 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda] Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-31 16:15:10 +0200
+I, [2018-05-31T16:15:10.264088 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda] Processing by Devise::SessionsController#new as HTML
+I, [2018-05-31T16:15:10.277561 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda]   Rendering users/sessions/new.html.erb within layouts/application
+I, [2018-05-31T16:15:10.285110 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda]   Rendered users/shared/_links.html.erb (0.9ms)
+I, [2018-05-31T16:15:10.285231 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda]   Rendered users/sessions/new.html.erb within layouts/application (7.5ms)
+I, [2018-05-31T16:15:10.286085 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda]   Rendered layouts/_header.html.erb (0.3ms)
+I, [2018-05-31T16:15:10.286309 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:10.286702 #22485]  INFO -- : [8c94da15-cfac-4fd7-96f8-b355707c2bda] Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+I, [2018-05-31T16:15:14.077266 #22485]  INFO -- : [dae0606b-d163-47a1-8a92-38db81700b03] Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-31 16:15:14 +0200
+I, [2018-05-31T16:15:14.078287 #22485]  INFO -- : [dae0606b-d163-47a1-8a92-38db81700b03] Processing by Devise::SessionsController#create as HTML
+I, [2018-05-31T16:15:14.078389 #22485]  INFO -- : [dae0606b-d163-47a1-8a92-38db81700b03]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"PA18fjALGPX/G/3i63aRmOUewk5d+tWSkj8tLzkRE2efz0aeu1oyd2vnancJB/WYGxN19x+gfuCrFyGQwZscVg==", "user"=>{"email"=>"jack@jack.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+D, [2018-05-31T16:15:14.080908 #22485] DEBUG -- : [dae0606b-d163-47a1-8a92-38db81700b03]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jack@jack.com"], ["LIMIT", 1]]
+D, [2018-05-31T16:15:14.200380 #22485] DEBUG -- : [dae0606b-d163-47a1-8a92-38db81700b03]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T16:15:14.202773 #22485] DEBUG -- : [dae0606b-d163-47a1-8a92-38db81700b03]   [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-05-31 14:15:14.200041"], ["sign_in_count", 2], ["updated_at", "2018-05-31 14:15:14.200735"], ["id", 1]]
+D, [2018-05-31T16:15:14.378510 #22485] DEBUG -- : [dae0606b-d163-47a1-8a92-38db81700b03]   [1m[35m (175.1ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-05-31T16:15:14.421479 #22485]  INFO -- : [dae0606b-d163-47a1-8a92-38db81700b03] Redirected to http://localhost:3000/
+I, [2018-05-31T16:15:14.422326 #22485]  INFO -- : [dae0606b-d163-47a1-8a92-38db81700b03] Completed 302 Found in 344ms (ActiveRecord: 176.5ms)
+I, [2018-05-31T16:15:14.441440 #22485]  INFO -- : [060e3819-b943-4f96-9613-b0c83486b079] Started GET "/" for 127.0.0.1 at 2018-05-31 16:15:14 +0200
+I, [2018-05-31T16:15:14.443588 #22485]  INFO -- : [060e3819-b943-4f96-9613-b0c83486b079] Processing by HomeController#index as HTML
+D, [2018-05-31T16:15:14.447112 #22485] DEBUG -- : [060e3819-b943-4f96-9613-b0c83486b079]   [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+D, [2018-05-31T16:15:14.448925 #22485] DEBUG -- : [060e3819-b943-4f96-9613-b0c83486b079]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:14.451295 #22485] DEBUG -- : [060e3819-b943-4f96-9613-b0c83486b079]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-05-31T16:15:14.452358 #22485]  INFO -- : [060e3819-b943-4f96-9613-b0c83486b079]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T16:15:14.453308 #22485] DEBUG -- : [060e3819-b943-4f96-9613-b0c83486b079]   [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T16:15:14.454627 #22485]  INFO -- : [060e3819-b943-4f96-9613-b0c83486b079]   Rendered home/index.html.erb within layouts/application (2.1ms)
+I, [2018-05-31T16:15:14.456328 #22485]  INFO -- : [060e3819-b943-4f96-9613-b0c83486b079]   Rendered layouts/_header.html.erb (0.6ms)
+I, [2018-05-31T16:15:14.456893 #22485]  INFO -- : [060e3819-b943-4f96-9613-b0c83486b079]   Rendered layouts/_footer.html.erb (0.1ms)
+I, [2018-05-31T16:15:14.457278 #22485]  INFO -- : [060e3819-b943-4f96-9613-b0c83486b079] Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 2.2ms)
+I, [2018-05-31T16:15:14.542499 #22485]  INFO -- : [15bb1b00-5f0f-497e-a8c7-7f3cf4f77298] Started GET "/assets/panier-0c086c8c54397244eaa690989a6042a8fbfdd7eb41678d8a03b42257771e9476.png" for 127.0.0.1 at 2018-05-31 16:15:14 +0200
+I, [2018-05-31T16:15:16.517007 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384] Started GET "/carts/1" for 127.0.0.1 at 2018-05-31 16:15:16 +0200
+I, [2018-05-31T16:15:16.518019 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384] Processing by CartsController#show as HTML
+I, [2018-05-31T16:15:16.518161 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   Parameters: {"id"=>"1"}
+D, [2018-05-31T16:15:16.519987 #22485] DEBUG -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:16.520980 #22485] DEBUG -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:16.522096 #22485] DEBUG -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:16.530127 #22485] DEBUG -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "carts_items" ON "items"."id" = "carts_items"."item_id" WHERE "carts_items"."cart_id" = ?[0m  [["cart_id", 1]]
+I, [2018-05-31T16:15:16.538360 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   Rendering carts/show.html.erb within layouts/application
+I, [2018-05-31T16:15:16.539091 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   Rendered carts/show.html.erb within layouts/application (0.6ms)
+I, [2018-05-31T16:15:16.540202 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   Rendered layouts/_header.html.erb (0.4ms)
+I, [2018-05-31T16:15:16.540400 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:16.540673 #22485]  INFO -- : [d52d17fa-55b2-47bb-8bce-d8c42f711384] Completed 200 OK in 22ms (Views: 6.1ms | ActiveRecord: 1.9ms)
+I, [2018-05-31T16:15:18.118282 #22485]  INFO -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785] Started GET "/" for 127.0.0.1 at 2018-05-31 16:15:18 +0200
+I, [2018-05-31T16:15:18.121115 #22485]  INFO -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785] Processing by HomeController#index as HTML
+D, [2018-05-31T16:15:18.126150 #22485] DEBUG -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   [1m[36mCart Load (1.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+D, [2018-05-31T16:15:18.129729 #22485] DEBUG -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:18.133350 #22485] DEBUG -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-05-31T16:15:18.136064 #22485]  INFO -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T16:15:18.137787 #22485] DEBUG -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T16:15:18.139885 #22485]  INFO -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   Rendered home/index.html.erb within layouts/application (3.3ms)
+I, [2018-05-31T16:15:18.142715 #22485]  INFO -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   Rendered layouts/_header.html.erb (0.9ms)
+I, [2018-05-31T16:15:18.143643 #22485]  INFO -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785]   Rendered layouts/_footer.html.erb (0.1ms)
+I, [2018-05-31T16:15:18.144270 #22485]  INFO -- : [8b09c423-d6c8-4c1d-9921-2d6d72830785] Completed 200 OK in 22ms (Views: 8.1ms | ActiveRecord: 4.8ms)
+I, [2018-05-31T16:15:19.813657 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374] Started GET "/carts/1" for 127.0.0.1 at 2018-05-31 16:15:19 +0200
+I, [2018-05-31T16:15:19.816337 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374] Processing by CartsController#show as HTML
+I, [2018-05-31T16:15:19.816998 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374]   Parameters: {"id"=>"1"}
+D, [2018-05-31T16:15:19.821643 #22485] DEBUG -- : [268f8433-cb99-4867-80d6-8c0715df8374]   [1m[36mCart Load (1.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:19.825235 #22485] DEBUG -- : [268f8433-cb99-4867-80d6-8c0715df8374]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:19.828748 #22485] DEBUG -- : [268f8433-cb99-4867-80d6-8c0715df8374]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:19.832933 #22485] DEBUG -- : [268f8433-cb99-4867-80d6-8c0715df8374]   [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "carts_items" ON "items"."id" = "carts_items"."item_id" WHERE "carts_items"."cart_id" = ?[0m  [["cart_id", 1]]
+I, [2018-05-31T16:15:19.834606 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374]   Rendering carts/show.html.erb within layouts/application
+I, [2018-05-31T16:15:19.835428 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374]   Rendered carts/show.html.erb within layouts/application (0.4ms)
+I, [2018-05-31T16:15:19.837333 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374]   Rendered layouts/_header.html.erb (0.6ms)
+I, [2018-05-31T16:15:19.837871 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374]   Rendered layouts/_footer.html.erb (0.1ms)
+I, [2018-05-31T16:15:19.838393 #22485]  INFO -- : [268f8433-cb99-4867-80d6-8c0715df8374] Completed 200 OK in 21ms (Views: 4.5ms | ActiveRecord: 4.6ms)
+I, [2018-05-31T16:15:21.714809 #22485]  INFO -- : [17c0014e-d655-44d4-bf2c-1c36b719307e] Started GET "/" for 127.0.0.1 at 2018-05-31 16:15:21 +0200
+I, [2018-05-31T16:15:21.716746 #22485]  INFO -- : [17c0014e-d655-44d4-bf2c-1c36b719307e] Processing by HomeController#index as HTML
+D, [2018-05-31T16:15:21.718472 #22485] DEBUG -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+D, [2018-05-31T16:15:21.719495 #22485] DEBUG -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:21.720796 #22485] DEBUG -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-05-31T16:15:21.721631 #22485]  INFO -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T16:15:21.722329 #22485] DEBUG -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T16:15:21.723171 #22485]  INFO -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   Rendered home/index.html.erb within layouts/application (1.4ms)
+I, [2018-05-31T16:15:21.724242 #22485]  INFO -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   Rendered layouts/_header.html.erb (0.4ms)
+I, [2018-05-31T16:15:21.724438 #22485]  INFO -- : [17c0014e-d655-44d4-bf2c-1c36b719307e]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:21.724673 #22485]  INFO -- : [17c0014e-d655-44d4-bf2c-1c36b719307e] Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 1.6ms)
+I, [2018-05-31T16:15:22.900103 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b] Started GET "/items/5" for 127.0.0.1 at 2018-05-31 16:15:22 +0200
+I, [2018-05-31T16:15:22.901303 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b] Processing by ItemsController#show as HTML
+I, [2018-05-31T16:15:22.901473 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   Parameters: {"id"=>"5"}
+D, [2018-05-31T16:15:22.903331 #22485] DEBUG -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2018-05-31T16:15:22.904228 #22485] DEBUG -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+D, [2018-05-31T16:15:22.905168 #22485] DEBUG -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:22.906186 #22485] DEBUG -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-05-31T16:15:22.915408 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   Rendering items/show.html.erb within layouts/application
+D, [2018-05-31T16:15:22.918051 #22485] DEBUG -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T16:15:22.919085 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   Rendered items/show.html.erb within layouts/application (3.5ms)
+I, [2018-05-31T16:15:22.920200 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   Rendered layouts/_header.html.erb (0.3ms)
+I, [2018-05-31T16:15:22.920446 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:22.920777 #22485]  INFO -- : [a5f1a6a0-d1c5-44a0-b4dd-fc7834e1be7b] Completed 200 OK in 19ms (Views: 9.3ms | ActiveRecord: 2.2ms)
+I, [2018-05-31T16:15:26.753108 #22485]  INFO -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386] Started POST "/1/item/5" for 127.0.0.1 at 2018-05-31 16:15:26 +0200
+I, [2018-05-31T16:15:26.754277 #22485]  INFO -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386] Processing by CartsController#add_item as HTML
+I, [2018-05-31T16:15:26.754411 #22485]  INFO -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386]   Parameters: {"authenticity_token"=>"FxMl56R8aaw/ghkBsuVr1w4l7AX+yCvNzIJXM3wYEPPqn/nKHH4aUNpnW/ripAB9/RDIDfOFvk103igxxawcbg==", "id"=>"1", "item"=>"5"}
+D, [2018-05-31T16:15:26.756016 #22485] DEBUG -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386]   [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:26.756827 #22485] DEBUG -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2018-05-31T16:15:26.757157 #22485] DEBUG -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T16:15:26.763220 #22485] DEBUG -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386]   [1m[36mCart::HABTM_Items Create (1.0ms)[0m  [1m[32mINSERT INTO "carts_items" ("cart_id", "item_id") VALUES (?, ?)[0m  [["cart_id", 1], ["item_id", 5]]
+D, [2018-05-31T16:15:27.203177 #22485] DEBUG -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386]   [1m[35m (439.4ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-05-31T16:15:27.411514 #22485]  INFO -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386] No template found for CartsController#add_item, rendering head :no_content
+I, [2018-05-31T16:15:27.411878 #22485]  INFO -- : [b39ec8da-00f0-4eaf-a3f4-9456e3f0f386] Completed 204 No Content in 657ms (ActiveRecord: 441.7ms)
+I, [2018-05-31T16:15:29.495045 #22485]  INFO -- : [d400d612-df37-48c3-a1b7-774beae952a9] Started GET "/" for 127.0.0.1 at 2018-05-31 16:15:29 +0200
+I, [2018-05-31T16:15:29.497312 #22485]  INFO -- : [d400d612-df37-48c3-a1b7-774beae952a9] Processing by HomeController#index as HTML
+D, [2018-05-31T16:15:29.502027 #22485] DEBUG -- : [d400d612-df37-48c3-a1b7-774beae952a9]   [1m[36mCart Load (1.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+D, [2018-05-31T16:15:29.505246 #22485] DEBUG -- : [d400d612-df37-48c3-a1b7-774beae952a9]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:29.507989 #22485] DEBUG -- : [d400d612-df37-48c3-a1b7-774beae952a9]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-05-31T16:15:29.509450 #22485]  INFO -- : [d400d612-df37-48c3-a1b7-774beae952a9]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T16:15:29.510788 #22485] DEBUG -- : [d400d612-df37-48c3-a1b7-774beae952a9]   [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T16:15:29.512600 #22485]  INFO -- : [d400d612-df37-48c3-a1b7-774beae952a9]   Rendered home/index.html.erb within layouts/application (2.9ms)
+I, [2018-05-31T16:15:29.514484 #22485]  INFO -- : [d400d612-df37-48c3-a1b7-774beae952a9]   Rendered layouts/_header.html.erb (0.8ms)
+I, [2018-05-31T16:15:29.514843 #22485]  INFO -- : [d400d612-df37-48c3-a1b7-774beae952a9]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:29.515273 #22485]  INFO -- : [d400d612-df37-48c3-a1b7-774beae952a9] Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 3.6ms)
+I, [2018-05-31T16:15:30.724066 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb] Started GET "/carts/1" for 127.0.0.1 at 2018-05-31 16:15:30 +0200
+I, [2018-05-31T16:15:30.726482 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb] Processing by CartsController#show as HTML
+I, [2018-05-31T16:15:30.726847 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   Parameters: {"id"=>"1"}
+D, [2018-05-31T16:15:30.728767 #22485] DEBUG -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:30.730407 #22485] DEBUG -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:30.731645 #22485] DEBUG -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:30.733049 #22485] DEBUG -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "carts_items" ON "items"."id" = "carts_items"."item_id" WHERE "carts_items"."cart_id" = ?[0m  [["cart_id", 1]]
+I, [2018-05-31T16:15:30.733953 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   Rendering carts/show.html.erb within layouts/application
+I, [2018-05-31T16:15:30.737067 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   Rendered carts/show.html.erb within layouts/application (2.9ms)
+I, [2018-05-31T16:15:30.738921 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   Rendered layouts/_header.html.erb (0.5ms)
+I, [2018-05-31T16:15:30.739232 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:30.739579 #22485]  INFO -- : [5602fe25-6046-421d-92f7-b81fdc5f32bb] Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 1.8ms)
+I, [2018-05-31T16:15:32.356297 #22485]  INFO -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67] Started POST "/1?item=5" for 127.0.0.1 at 2018-05-31 16:15:32 +0200
+I, [2018-05-31T16:15:32.357544 #22485]  INFO -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67] Processing by CartsController#destroy_item as HTML
+I, [2018-05-31T16:15:32.357826 #22485]  INFO -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67]   Parameters: {"authenticity_token"=>"zpwPJNFBwqa0kH1Cj7d9rJPWIRJqKojAHFmVuqZLAykqdfMDVTSs6zuxU4zM50yN7xKAXsTXOZjYLhUKEx26Ng==", "item"=>"5", "id"=>"1"}
+D, [2018-05-31T16:15:32.359274 #22485] DEBUG -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67]   [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:32.359898 #22485] DEBUG -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67]   [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2018-05-31T16:15:32.362986 #22485] DEBUG -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" INNER JOIN "carts_items" ON "carts"."id" = "carts_items"."cart_id" WHERE "carts_items"."item_id" = ? AND "carts"."id" = ? LIMIT ?[0m  [["item_id", 5], ["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:32.363438 #22485] DEBUG -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2018-05-31T16:15:32.365673 #22485] DEBUG -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67]   [1m[36mItem::HABTM_Carts Destroy (1.1ms)[0m  [1m[31mDELETE FROM "carts_items" WHERE "carts_items"."item_id" = ? AND "carts_items"."cart_id" = ?[0m  [["item_id", 5], ["cart_id", 1]]
+D, [2018-05-31T16:15:32.550104 #22485] DEBUG -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67]   [1m[35m (183.9ms)[0m  [1m[36mcommit transaction[0m
+I, [2018-05-31T16:15:32.551487 #22485]  INFO -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67] Redirected to http://localhost:3000/carts/1
+I, [2018-05-31T16:15:32.552377 #22485]  INFO -- : [f019179b-0b0a-4cf3-9f94-87cdcce6dd67] Completed 302 Found in 194ms (ActiveRecord: 186.0ms)
+I, [2018-05-31T16:15:32.611885 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91] Started GET "/carts/1" for 127.0.0.1 at 2018-05-31 16:15:32 +0200
+I, [2018-05-31T16:15:32.612808 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91] Processing by CartsController#show as HTML
+I, [2018-05-31T16:15:32.612940 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   Parameters: {"id"=>"1"}
+D, [2018-05-31T16:15:32.614228 #22485] DEBUG -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:32.615485 #22485] DEBUG -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:32.617041 #22485] DEBUG -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:32.618511 #22485] DEBUG -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "carts_items" ON "items"."id" = "carts_items"."item_id" WHERE "carts_items"."cart_id" = ?[0m  [["cart_id", 1]]
+I, [2018-05-31T16:15:32.619126 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   Rendering carts/show.html.erb within layouts/application
+I, [2018-05-31T16:15:32.619325 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   Rendered carts/show.html.erb within layouts/application (0.1ms)
+I, [2018-05-31T16:15:32.620338 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   Rendered layouts/_header.html.erb (0.3ms)
+I, [2018-05-31T16:15:32.620543 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:32.620776 #22485]  INFO -- : [2909a2c8-21b0-4dc0-8bc3-77436fe68f91] Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 1.4ms)
+I, [2018-05-31T16:15:36.360500 #22485]  INFO -- : [07ce5344-0660-4fcb-8947-71617654f5ac] Started GET "/" for 127.0.0.1 at 2018-05-31 16:15:36 +0200
+I, [2018-05-31T16:15:36.361706 #22485]  INFO -- : [07ce5344-0660-4fcb-8947-71617654f5ac] Processing by HomeController#index as HTML
+D, [2018-05-31T16:15:36.363407 #22485] DEBUG -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+D, [2018-05-31T16:15:36.364528 #22485] DEBUG -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2018-05-31T16:15:36.365684 #22485] DEBUG -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2018-05-31T16:15:36.366672 #22485]  INFO -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   Rendering home/index.html.erb within layouts/application
+D, [2018-05-31T16:15:36.367544 #22485] DEBUG -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+I, [2018-05-31T16:15:36.368808 #22485]  INFO -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   Rendered home/index.html.erb within layouts/application (1.9ms)
+I, [2018-05-31T16:15:36.370646 #22485]  INFO -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   Rendered layouts/_header.html.erb (0.8ms)
+I, [2018-05-31T16:15:36.371321 #22485]  INFO -- : [07ce5344-0660-4fcb-8947-71617654f5ac]   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2018-05-31T16:15:36.371683 #22485]  INFO -- : [07ce5344-0660-4fcb-8947-71617654f5ac] Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.6ms)
