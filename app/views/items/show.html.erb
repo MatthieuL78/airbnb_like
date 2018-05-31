@@ -1,4 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="show">
+  <h1>Get your kitten's picture!</h1>
+  <p>get it right now!!!</p>
+</div>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<div class="container">
+  <div class="article">
+    <%= image_tag(@item.image_url) %>
+  </div>
+  <div class="description">
+    <div class="details">
+      <h2><%= @item.title %></h2>
+      <br><hr>
+      <p><%= @item.description %></p>
+      <h1><%= @item.price %>€</h1>
+    </div>
+  </div>
+</div>
+<div class="button">
+  <%= link_to "Add to cart", root_path %>
+</div>
+<div class="section1">
+  <h1>Jamais deux sans trois!😸</h1>
+</div>
+
+<div class="content">
+    <% @items.each do |item| %>
+	    <% unless item.id == @item.id %>
+		    <div class="main">
+		      <a href="items/<%= item.id %>">
+			      <%= image_tag(item.image_url) %>
+			      <h3><%= item.title %></h3>
+			      <p><%= item.description %></p>
+			      <p><%= item.price %></p>
+			  </a>
+		    </div>
+		<% end %>
+  <% end %>
+</div>
