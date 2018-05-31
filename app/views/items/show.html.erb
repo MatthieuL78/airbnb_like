@@ -27,7 +27,7 @@
     <% @items.each do |item| %>
 	    <% unless item.id == @item.id %>
 		    <div class="main">
-		      <a href="items/<%= item.id %>">
+		      <a href="<%= item.id %>">
 			      <%= image_tag(item.image_url) %>
 			      <h3><%= item.title %></h3>
 			      <p><%= item.description %></p>
