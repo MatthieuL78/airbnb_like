@@ -184,10 +184,11 @@ footer p{
   align-items: center;
   width: 90%;
   color: #FFF;
+  font-size: 2em;
   text-align: center;
   text-decoration: none;
 }
-.button a:hover{
+.button input:hover{
   background-color: rgba(30,30,250,1);
   color: #FFF;
 }
