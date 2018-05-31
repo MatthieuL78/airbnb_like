@@ -1,8 +1,8 @@
 <div class="nav">
-  <a href="/"><%= image_tag ("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png") %></a>
+<a href="/"><%= image_tag ("https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png") %></a>
   <% if user_signed_in? %>
     <%= link_to cart_path(@cart) do %>
-      <%= image_tag 'panier.png', width: 100, height: 100, alt: 'panier', class: 'stylay' %>
+      <%= image_tag 'panier.png', class: 'stylay' %>
     <% end %>
     <div class="login">
       <%= link_to "Edit", edit_user_registration_path %>

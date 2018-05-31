@@ -54,13 +54,16 @@ footer p{
 }
 .nav .stylay{
   position: absolute;
-  right: 115px;
-  top: 0px;
+  right: 145px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
 }
 .login a{
-  background-color: rgba(150,150,150,1);
-  padding: 5px;
+  background-color: rgba(50,50,50,1);
+  padding: 5px 10px;
   border-radius: 4px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .login a:hover{
   background-color: rgba(150,150,150,.7);
@@ -169,11 +172,11 @@ footer p{
 .container img{
   width: 100%;
 }
-.button{
+.button_to{
   display: flex;
   color: #FFF;
 }
-.button a{
+.button_to input{
   background-color: rgba(30,30,250,.7);
   border-radius: 4px;
   padding: 20px;
@@ -183,7 +186,6 @@ footer p{
   color: #FFF;
   text-align: center;
   text-decoration: none;
-
 }
 .button a:hover{
   background-color: rgba(30,30,250,1);
@@ -263,3 +265,44 @@ footer p{
     border-radius: 35px;
     min-width: 170px;
   }
+
+/* carts */
+
+#customcarts{
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 50px;
+  text-align: center;
+  background-size: 100%;
+}
+#customcarts h1{
+  color: #F45;
+  transform: rotate(-5deg);
+  font-size: 3em;
+}
+#customcarts .totalprice{
+  width: 50%;
+  margin: 10px auto;
+}
+#customcarts .totalprice p{
+  border-bottom: 1px solid #DDD;
+}
+#customcarts h2{
+  padding: 10px;
+}
+#customcarts .button_to input{
+  padding: 5px;
+  border: none;
+  background-color: rgba(206, 251, 95,1);
+}
+#customcarts .button_to input:hover{
+  background-color: rgba(206, 251, 95,.6);
+}
+#customcarts .photos{
+  background-color: rgba(251, 251, 255,1);
+  margin: 10px auto;
+  border: 1px solid #DDD;
+  width: 400px;
+  border-radius: 4px;
+  padding: 5px;
+}
